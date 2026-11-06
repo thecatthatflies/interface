@@ -38,9 +38,9 @@ Skills trigger on their own when a request fits, including casual ones ("make me
 ```bash
 git clone https://github.com/thecatthatflies/interface.git
 cd interface
-./install.sh                      # all skills into ~/.claude/skills
-./install.sh --codex              # into ~/.codex/skills
-./install.sh brand-identity       # one skill (the foundation comes with it)
+bash install.sh                      # all skills into ~/.claude/skills
+bash install.sh --codex              # into ~/.codex/skills
+bash install.sh brand-identity       # one skill (the foundation comes with it)
 ```
 
 The scripts need Node 18 or later. Browser checks use your installed Chrome, or download Playwright's Chromium on first use.

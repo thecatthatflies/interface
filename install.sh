@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Install the interface skills for Claude Code, Codex, or any agent that reads a skills folder.
-#   ./install.sh                 all skills into ~/.claude/skills
-#   ./install.sh --codex         all skills into ~/.codex/skills
-#   ./install.sh --dir <path>    all skills into <path>
-#   ./install.sh brand-identity dashboard-design   only the named skills
+#   bash install.sh                 all skills into ~/.claude/skills
+#   bash install.sh --codex         all skills into ~/.codex/skills
+#   bash install.sh --dir <path>    all skills into <path>
+#   bash install.sh brand-identity dashboard-design   only the named skills
 set -euo pipefail
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
