@@ -23,7 +23,9 @@ When two collide, the earlier one wins.
 6. **It stays put.** People need stable layout; agents need references that survive re-render. Different tests, require both. Update values in place, do not reorder rows under the pointer, keep names stable while numbers tick.
 7. **What is possible is visible.** Recognition over recall, for both readers. No action only on hover. Choices enumerable. Mode, filters, and sort shown, and in the URL. An outcome outlasts its toast.
 8. **Follow convention.** Unusual controls cost learning and break tools. Brand owns the look; convention owns the behavior.
-9. **Then make it handsome.** Polish builds trust and matters for long use, and it comes last. Typeface and accent are decisions for this product, not rules.
+9. **Then make it handsome.** Polish builds trust and matters for long use. It ranks last only when it conflicts with the others; it does not get the least effort. Typeface and accent are decisions for this product, not rules.
+
+The ranking settles conflicts. It is not a budget: a correct interface that looks unfinished loses the reader's trust and attention before its correctness matters.
 
 ## Workflow
 
@@ -59,7 +61,12 @@ Reader, frequency, and error cost settle most disputes. Do not import control-ro
 2. **One function per action**, shared by every control that triggers it. Separate *requested* from *confirmed* state, and announce outcomes in a polite live region as well as visually.
 3. **States, now, not later:** loading, empty, error, stale, partial, each with real words.
 4. **Truth:** totals from rows, one variable per fact, comparators named ("vs Sep"), zero distinct from missing, nothing invented.
-5. **Style** for this reader. Neutral at rest on monitoring screens so alarm color means something. Do not chase or avoid "AI tells"; ask whether a choice serves this reader's task.
+5. **Visual design**, with the same care as the structure. Words carry meaning, but layout carries the scan: the reader should find the answer, the problem, and the next action by shape and position before reading a sentence.
+   - Prefer compact labels, numbers, and status chips over sentences for anything scanned repeatedly; keep sentences for the one-line answer and for explanations.
+   - Use a clear layout pattern for the genre (list and detail, a summary band over a table, a two-column console) instead of one long column of prose.
+   - Build hierarchy with size, weight, spacing, and grouping, and a type scale and spacing scale used consistently. If `brand-identity` tokens exist, use them.
+   - Neutral at rest on monitoring screens so alarm color means something. Do not chase or avoid "AI tells"; ask whether a choice serves this reader's task.
+   - Look at the screenshots and ask: would a demanding designer ship this? If it reads like a well-structured document rather than a product, it is not done.
 
 ### 4. Verify in a real browser
 
