@@ -1,0 +1,23 @@
+{
+  "skill_name": "dashboard-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "i run a small bakery and take orders through a google form that goes to a spreadsheet. can you make me a simple page that shows how things are going? i mostly check it on my phone",
+      "expected_output": "Genre identified as small-business status for a phone reader. First screen leads with sentences containing numbers and the next action (orders for the next pickup day, unpaid orders with amounts), then short actionable lists, then at most one or two labeled charts. Plain words, no control-room density, no KPI grid of percent deltas. Handles empty sheet, a single order, and missing payment status honestly. Values come from the sheet, not invented; any demo data is labeled. Data time shown. Works at 320 px and by keyboard, and the audit is run.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We need an on-call dashboard for our payments platform: 14 services behind Prometheus, SLOs on availability and p99 latency, PagerDuty alerts. The current Grafana board is 40 panels of CPU and memory and nobody can tell during an incident what is actually broken. Design the replacement: panel list, layout, alert behaviour, refresh, and how you'd verify it.",
+      "expected_output": "Starts from the one question (is anything wrong for customers, where) and a metric inventory. Overview shows symptoms per service (RED or golden signals, p50 and p99 not means, SLO attainment and burn rate), sorted by severity, with resource USE metrics moved to drill-down. Status sentence derived from data with freshness. Alarm list with budget (for example at most 2 incidents per 12-hour shift), runbook links, acknowledged state, links into the dashboard with time range. Deploy and incident annotations on time series. Neutral at rest. Refresh matched to scrape cadence, display updates at most once per second, pause control. Fixture-based verification including normal, abnormal, stale, source-failed, and noise, plus the agent snapshot pass.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Quick one: our exec KPI page shows Revenue $48.2K ▲12.4%, Active users 1,203 ▲3.1%, Churn 2.4% ▲0.3% all in green, and we just launched last week so there isn't really a prior period. Also the 'Recent activity' panel shows customer support ticket titles. Can you make it look more polished for the board meeting tomorrow?",
+      "expected_output": "Does not just polish. Flags that the deltas cannot be real without a prior period and must be removed or replaced with what exists (for example, totals since launch, daily values, the partial period marked); that churn rising shown in green is wrong because color must follow direction of good; and that each figure needs a named period and comparator. Treats ticket titles as outsider-written text: shown as quoted data, not used in headings or control names. Then improves layout and hierarchy, and states clearly which numbers are real and which were removed.",
+      "files": []
+    }
+  ]
+}
