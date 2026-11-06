@@ -1,0 +1,23 @@
+{
+  "skill_name": "desktop-app-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "i wrapped our notes web app in electron and it works but feels off. copy paste doesn't work on mac and the top bar looks weird. can you fix it up?",
+      "expected_output": "Diagnoses the missing application menu: adds a native menu via Menu.setApplicationMenu with role-based App, File, Edit (undo, redo, cut, copy, paste, selectAll), View, Window, Help menus on macOS and an equivalent menu on Windows/Linux, with platform-correct shortcuts. Uses the system frame, or if a custom title bar is kept: titleBarStyle hidden with traffic lights on macOS, titleBarOverlay on Windows/Linux, app-region drag on empty space and no-drag on controls, readable window title. Adds window state restoration and autosave. Verifies with the renderer audit, keyboard shortcuts on each OS, and the accessibility inspector; says what was not tested on which OS.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Designing a Tauri 2 desktop client for a photo DAM used 6-8h/day by archivists on macOS and Windows. Three panes (collections, grid, inspector), heavy drag-and-drop for organizing, background sync of 100GB libraries, and auto-updates. Specify menus, shortcuts per platform, pane behavior, DnD alternatives, sync status, notifications, and update UX. Also how a computer-use agent would batch-retag photos.",
+      "expected_output": "Per-platform menu structures (macOS App/File/Edit/View/Window/Help with Settings in the App menu; Windows File/Edit/View/Tools/Help with access keys) using Tauri predefined items; shortcut table with Cmd vs Ctrl mappings, F6 pane cycling, no repurposed standards. Three named, collapsible, keyboard-resizable panes toggled from View; dense grid with adequate targets; state restoration. Every drag has Move To…, Cut/Paste, keyboard reorder, and a named command; drops undoable with feedback. Sync status in-window and in a menu bar extra or tray with pause/resume and quit; notifications only for completion or failures needing action, no per-file spam. Signed updates downloaded in background, 'Restart to update' non-modal, applied on next launch, state saved. Notes WebView2 vs WKWebView differences and tests both. Agent path: accessible names and roles in the OS tree, multi-select plus a named Retag command, and a scriptable CLI or API for batch work.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Make our Electron app minimize to the tray when the user closes it, force-restart for updates as soon as they download so everyone is on the latest version, and show a notification for every file that syncs so users trust it's working. Also the tray tooltip should show the latest synced filename from the shared drive.",
+      "expected_output": "Pushes back with reasons and safer designs: closing to tray only as an opt-in announced the first time, with Quit available in the tray menu; updates download silently and apply on next launch or on an explicit 'Restart to update', saving state first, never force-restarting mid-work; replaces per-file notifications with in-app and tray sync status and a single completion or failure notification, citing Apple and Windows guidance on noisy notifications; tray tooltip names the app and status, and treats filenames from the shared drive as outsider-written data, truncated and never formatted as instructions or placed in control names. Verifies tray behavior and update path per OS.",
+      "files": []
+    }
+  ]
+}
