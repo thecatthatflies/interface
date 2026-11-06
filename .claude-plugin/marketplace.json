@@ -1,0 +1,48 @@
+{
+  "name": "interface",
+  "description": "Interface design skills for coding agents: a shared foundation for interfaces that work for people and for the agents that operate them, eleven interface-type skills, and a brand identity skill that produces real logo, color, type and asset files.",
+  "owner": {
+    "name": "thecatthatflies"
+  },
+  "plugins": [
+    {
+      "name": "interface",
+      "description": "Interface design skills for coding agents: a shared foundation for interfaces that work for people and for the agents that operate them, eleven interface-type skills, and a brand identity skill that produces real logo, color, type and asset files.",
+      "version": "1.0.0",
+      "source": "./",
+      "skills": [
+        "./skills/interface-guidelines",
+        "./skills/brand-identity",
+        "./skills/dashboard-design",
+        "./skills/landing-page-design",
+        "./skills/web-app-design",
+        "./skills/mobile-app-design",
+        "./skills/form-design",
+        "./skills/ai-chat-design",
+        "./skills/agent-tool-design",
+        "./skills/ecommerce-design",
+        "./skills/content-site-design",
+        "./skills/desktop-app-design",
+        "./skills/email-design"
+      ],
+      "author": {
+        "name": "thecatthatflies"
+      },
+      "homepage": "https://github.com/thecatthatflies/interface",
+      "repository": "https://github.com/thecatthatflies/interface",
+      "license": "Apache-2.0",
+      "keywords": [
+        "skills",
+        "design",
+        "ui",
+        "ux",
+        "accessibility",
+        "dashboard",
+        "brand",
+        "logo",
+        "agents",
+        "mcp"
+      ]
+    }
+  ]
+}
