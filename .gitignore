@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+# experiment workspace: builds, screenshots and raw scores stay local
+.lab/
