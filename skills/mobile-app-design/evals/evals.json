@@ -1,0 +1,23 @@
+{
+  "skill_name": "mobile-app-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "my dog walking business needs an app so clients can book walks and see when the walker picked up their dog. something simple, mostly people will use it on their phones",
+      "expected_output": "Writes a short brief first and decides native vs mobile web with reasons (occasional booking from a link favors a mobile web app or PWA; real-time pickup notifications on iOS favor native or a Home Screen web app, and the answer says which tradeoff it took). Bottom navigation with 3 to 4 labeled destinations, not a hamburger. Booking form with correct input types and autofill, submit kept above the keyboard. Pickup status shown as text with absolute time ('Picked up by Sam at 14:05'), cached with its age when offline. Notification permission asked after the first booking, not at launch, with specific copy. Targets at least 44 pt / 48 dp, text that scales, safe-area insets. Every control labeled. Verifies at a small and a large phone width, at 200% text, with the foundation audit and mobile-check script, and states what was not tested on real devices.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're shipping a SwiftUI + Jetpack Compose field-inspection app for utility crews (gloves, sunlight, patchy LTE in rural areas). Inspections have ~40 fields plus photos and must be completable fully offline, then sync. QA runs XCUITest and Espresso/UiAutomator, and we're piloting an on-device agent that pre-fills inspections from photos. Design the inspection flow and the sync model; give us the component-level accessibility and identifier conventions.",
+      "expected_output": "Large targets beyond platform minimums for gloves and motion, high contrast, platform text styles scaling to the largest accessibility size. Inspection split into sections with progress, drafts persisted locally on every change and restored after process death (@SceneStorage or persisted model, rememberSaveable/SavedStateHandle). Three distinct write states per inspection (on device, sending, confirmed), idempotency keys per submission, visible pending and failed states with retry, conflicts shown rather than last-write-wins, photos queued with size and cellular rules. Offline status banner with data age. Camera and location permissions requested at the first photo or location field, with a working path after denial. Conventions: accessibilityLabel/contentDescription naming outcomes and unique per row from system IDs, accessibilityIdentifier/testTag with testTagsAsResourceId = true, same identifiers on both platforms, combined row elements with custom actions for swipe actions. Agent pre-fill marked as suggested, separate from confirmed values, with the person confirming each section; photo-derived text treated as untrusted and never placed in labels. Verification includes airplane-mode runs, kill-and-restore, VoiceOver and TalkBack passes, and tree-only UI tests.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Make our React Native signup screen feel more native and fix the layout. Product wants camera, contacts, location and push permission prompts on the very first screen so onboarding is 'done in one go', and the designer set allowFontScaling={false} everywhere because big text breaks the layout. Also the swipe-to-delete on saved addresses is the only way to remove one, that's fine right?",
+      "expected_output": "Pushes back with reasons and sources rather than complying silently: permission prompts moved to the moment each feature is first used (Apple HIG Privacy, web.dev and Android data, Android stops showing the dialog after two denials), push asked after the person sees what it is for, any pre-prompt screen uses a single Continue button and no Allow wording. Removes the global allowFontScaling={false}, fixes the layouts to stack at large sizes, and limits maxFontSizeMultiplier to a few tight labels if needed. Adds a visible delete path (edit mode or row menu) plus accessibilityActions for the swipe. Uses accessibilityRole, labels, and testIDs, respects safe areas and the keyboard. Runs mobile-check.mjs and reports remaining findings, and states what needs device testing.",
+      "files": []
+    }
+  ]
+}
