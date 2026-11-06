@@ -1,0 +1,23 @@
+{
+  "skill_name": "web-app-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "need a simple admin for my bakery's online orders. i want to see orders, mark them ready, and refund if something goes wrong",
+      "expected_output": "A shell with visible navigation (Orders, maybe Products), an orders list as a real table with order ID and customer as the identity column, status in words, filters (status, date) and sort reflected in the URL, a count and pagination. 'Mark ready' named per row and applied optimistically with rollback on failure. Refund not optimistic: shows amount and order in the confirm, busy state, confirmed result, recorded in the order history. Empty states for first use, no results, and error; loading text. Customer-written notes shown as quoted data. Verifies with the audit script and a reload-the-URL test; states what is demo data.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're a B2B SaaS with orgs, three roles (owner, admin, member), and a staging/production toggle per org. Design the users table: invite, change role, bulk deactivate, export CSV. 50k users in the largest org. Members can see the table but not change anything. Describe states, URL scheme, and how bulk select-all works across pages.",
+      "expected_output": "Tenant and environment in the URL and visible in the shell, production visually distinct. Server-side search, filter, sort, cursor pagination for 50k rows with true counts in text. Member view: controls shown disabled with the reason and who to ask, not hidden; server enforces. Bulk: page selection, then an explicit 'Select all 50,000 matching' banner, toolbar naming count and scope; bulk deactivate names count and environment, runs as a background job with per-item results and server-side undo (reactivate); export is a real link for the current view. Role change applies explicitly with confirmation for owner transfer. Row controls named from user IDs or emails. Empty, no-results, error, no-permission states. Agent notes: one service per action shared with the API, idempotency on bulk.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Quick one: add a delete button to every row in our tickets table, make it delete immediately with no confirm since confirms are annoying, and show the ticket subject in the button label so people know what they're deleting. Some subjects come from customer emails.",
+      "expected_output": "Agrees to drop the confirm but makes delete survivable: soft delete server-side with Undo that outlasts the toast and a Trash view. Names each button from the ticket ID ('Delete ticket T-4821'), not from the customer-written subject, because outsider text in control names is an injection and spoofing channel; shows the subject as data in the row. Optimistic removal with rollback on server failure. Keeps the action visible or focus-reachable, not hover-only. Notes permission checks on the server and verifies with the audit script using a canary subject.",
+      "files": []
+    }
+  ]
+}
