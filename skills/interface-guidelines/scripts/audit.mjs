@@ -385,7 +385,20 @@ async function axTree(context, page) {
   const interactive = []
   const headings = []
   const landmarks = []
-  for (const node of nodes) {
+  // getFullAXTree does not return nodes in document order, so walk the tree depth-first from the root.
+  // Heading order (and so the skipped-level check) depends on it.
+  const byId = new Map(nodes.map((n) => [n.nodeId, n]))
+  const ordered = []
+  const seen = new Set()
+  const visit = (n) => {
+    if (!n || seen.has(n.nodeId)) return
+    seen.add(n.nodeId)
+    ordered.push(n)
+    for (const id of n.childIds ?? []) visit(byId.get(id))
+  }
+  for (const n of nodes) if (!n.parentId) visit(n)
+  for (const n of nodes) if (!seen.has(n.nodeId)) ordered.push(n)
+  for (const node of ordered) {
     if (node.ignored) continue
     const role = node.role?.value
     const name = (node.name?.value ?? '').trim()
