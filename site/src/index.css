@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Brand roles from brand-identity (tokens.css) exposed to Tailwind. Components use roles only. */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-sunken: var(--color-surface-sunken);
+  --color-line: var(--color-border);
+  --color-line-strong: var(--color-border-strong);
+  --color-ink: var(--color-text);
+  --color-muted: var(--color-text-muted);
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-ink: var(--color-primary-text);
+  --color-primary-soft: var(--color-primary-subtle);
+  --color-agent: var(--color-agent);
+  --color-agent-ink: var(--color-agent-text);
+  --color-ok: var(--color-success-text);
+  --color-ok-soft: var(--color-success-subtle);
+  --color-warn: var(--color-warning-text);
+  --color-danger: var(--color-danger-text);
+  --color-danger-soft: var(--color-danger-subtle);
+  --color-focus: var(--color-focus);
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  /* Radius system: controls 10px, panels 18px, pills full. Taken from the mark's rounded square. */
+  --radius-control: 10px;
+  --radius-panel: 18px;
+}
+
+:root {
+  --agent-tint: color-mix(in oklab, var(--color-agent) 14%, transparent);
+  --primary-tint: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  /* Amber text that keeps 4.5:1 on the amber tint, in each theme. */
+  --agent-on-tint: var(--agent-700);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --agent-on-tint: var(--agent-200); }
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The brand's focus ring is the logo: thick, offset, impossible to miss. */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection { background: color-mix(in oklab, var(--color-primary) 28%, transparent); }
+
+/* Fine grain over the whole page, on a fixed layer so it never repaints with scroll. */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* The 1992 manual's dotted grid, used behind the hero specimen only. */
+.dot-grid {
+  background-image: radial-gradient(color-mix(in oklab, var(--color-text) 16%, transparent) 1px, transparent 1.2px);
+  background-size: 16px 16px;
+}
+
+.tree-line { font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; padding-left: 2ch; text-indent: -2ch; margin-bottom: 0.15rem; }
+
+.skip-link { position: absolute; left: -9999px; top: 12px; }
+.skip-link:focus { left: 16px; z-index: 70; }
