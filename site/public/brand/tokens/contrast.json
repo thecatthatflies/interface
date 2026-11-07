@@ -1,0 +1,394 @@
+{
+  "anchors": {
+    "primary": {
+      "seed": "#3442d9",
+      "step": 700
+    },
+    "agent": {
+      "seed": "#e8a33d",
+      "step": 400
+    }
+  },
+  "checks": [
+    {
+      "theme": "light",
+      "fg": "text",
+      "bg": "bg",
+      "ratio": 16.77,
+      "min": 7,
+      "pass": true,
+      "why": "body text (AAA target for long reading)",
+      "advisory": true
+    },
+    {
+      "theme": "light",
+      "fg": "text",
+      "bg": "surface",
+      "ratio": 17.04,
+      "min": 4.5,
+      "pass": true,
+      "why": "body text on cards",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "text-muted",
+      "bg": "bg",
+      "ratio": 4.88,
+      "min": 4.5,
+      "pass": true,
+      "why": "secondary text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "text-muted",
+      "bg": "surface",
+      "ratio": 4.96,
+      "min": 4.5,
+      "pass": true,
+      "why": "secondary text on cards",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "on-primary",
+      "bg": "primary",
+      "ratio": 7.17,
+      "min": 4.5,
+      "pass": true,
+      "why": "button label",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "primary",
+      "bg": "bg",
+      "ratio": 7.06,
+      "min": 3,
+      "pass": true,
+      "why": "button fill against page: advisory, the label identifies a button",
+      "advisory": true
+    },
+    {
+      "theme": "light",
+      "fg": "primary-text",
+      "bg": "bg",
+      "ratio": 5.25,
+      "min": 4.5,
+      "pass": true,
+      "why": "links and brand-colored text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "focus",
+      "bg": "bg",
+      "ratio": 3.59,
+      "min": 3,
+      "pass": true,
+      "why": "focus ring (2.4.13)",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "border-strong",
+      "bg": "surface",
+      "ratio": 3.5,
+      "min": 3,
+      "pass": true,
+      "why": "input borders (1.4.11)",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "success-text",
+      "bg": "bg",
+      "ratio": 6.49,
+      "min": 4.5,
+      "pass": true,
+      "why": "success text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "success-text",
+      "bg": "success-subtle",
+      "ratio": 6.18,
+      "min": 4.5,
+      "pass": true,
+      "why": "success text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "warning-text",
+      "bg": "bg",
+      "ratio": 4.95,
+      "min": 4.5,
+      "pass": true,
+      "why": "warning text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "warning-text",
+      "bg": "warning-subtle",
+      "ratio": 4.66,
+      "min": 4.5,
+      "pass": true,
+      "why": "warning text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "danger-text",
+      "bg": "bg",
+      "ratio": 5.36,
+      "min": 4.5,
+      "pass": true,
+      "why": "danger text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "danger-text",
+      "bg": "danger-subtle",
+      "ratio": 5.05,
+      "min": 4.5,
+      "pass": true,
+      "why": "danger text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "info-text",
+      "bg": "bg",
+      "ratio": 4.88,
+      "min": 4.5,
+      "pass": true,
+      "why": "info text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "info-text",
+      "bg": "info-subtle",
+      "ratio": 4.63,
+      "min": 4.5,
+      "pass": true,
+      "why": "info text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "primary-text",
+      "bg": "bg",
+      "ratio": 5.25,
+      "min": 4.5,
+      "pass": true,
+      "why": "primary text",
+      "advisory": false
+    },
+    {
+      "theme": "light",
+      "fg": "agent-text",
+      "bg": "bg",
+      "ratio": 5.02,
+      "min": 4.5,
+      "pass": true,
+      "why": "agent text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "text",
+      "bg": "bg",
+      "ratio": 18.12,
+      "min": 7,
+      "pass": true,
+      "why": "body text (AAA target for long reading)",
+      "advisory": true
+    },
+    {
+      "theme": "dark",
+      "fg": "text",
+      "bg": "surface",
+      "ratio": 15.89,
+      "min": 4.5,
+      "pass": true,
+      "why": "body text on cards",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "text-muted",
+      "bg": "bg",
+      "ratio": 7.81,
+      "min": 4.5,
+      "pass": true,
+      "why": "secondary text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "text-muted",
+      "bg": "surface",
+      "ratio": 6.85,
+      "min": 4.5,
+      "pass": true,
+      "why": "secondary text on cards",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "on-primary",
+      "bg": "primary",
+      "ratio": 7.67,
+      "min": 4.5,
+      "pass": true,
+      "why": "button label",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "primary",
+      "bg": "bg",
+      "ratio": 7.67,
+      "min": 3,
+      "pass": true,
+      "why": "button fill against page: advisory, the label identifies a button",
+      "advisory": true
+    },
+    {
+      "theme": "dark",
+      "fg": "primary-text",
+      "bg": "bg",
+      "ratio": 10.86,
+      "min": 4.5,
+      "pass": true,
+      "why": "links and brand-colored text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "focus",
+      "bg": "bg",
+      "ratio": 7.67,
+      "min": 3,
+      "pass": true,
+      "why": "focus ring (2.4.13)",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "border-strong",
+      "bg": "surface",
+      "ratio": 3.44,
+      "min": 3,
+      "pass": true,
+      "why": "input borders (1.4.11)",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "success-text",
+      "bg": "bg",
+      "ratio": 11.43,
+      "min": 4.5,
+      "pass": true,
+      "why": "success text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "success-text",
+      "bg": "success-subtle",
+      "ratio": 9.92,
+      "min": 4.5,
+      "pass": true,
+      "why": "success text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "warning-text",
+      "bg": "bg",
+      "ratio": 10.77,
+      "min": 4.5,
+      "pass": true,
+      "why": "warning text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "warning-text",
+      "bg": "warning-subtle",
+      "ratio": 9.5,
+      "min": 4.5,
+      "pass": true,
+      "why": "warning text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "danger-text",
+      "bg": "bg",
+      "ratio": 10.5,
+      "min": 4.5,
+      "pass": true,
+      "why": "danger text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "danger-text",
+      "bg": "danger-subtle",
+      "ratio": 9.46,
+      "min": 4.5,
+      "pass": true,
+      "why": "danger text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "info-text",
+      "bg": "bg",
+      "ratio": 11.04,
+      "min": 4.5,
+      "pass": true,
+      "why": "info text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "info-text",
+      "bg": "info-subtle",
+      "ratio": 9.75,
+      "min": 4.5,
+      "pass": true,
+      "why": "info text on its tinted banner",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "primary-text",
+      "bg": "bg",
+      "ratio": 10.86,
+      "min": 4.5,
+      "pass": true,
+      "why": "primary text",
+      "advisory": false
+    },
+    {
+      "theme": "dark",
+      "fg": "agent-text",
+      "bg": "bg",
+      "ratio": 10.77,
+      "min": 4.5,
+      "pass": true,
+      "why": "agent text",
+      "advisory": false
+    }
+  ]
+}

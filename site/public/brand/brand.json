@@ -1,0 +1,24 @@
+{
+  "name": "interface",
+  "tagline": "Design skills for interfaces with two readers: the person looking and the agent operating.",
+  "url": "https://github.com/thecatthatflies/interface",
+  "version": "1.0",
+  "idea": "Every interface now has two readers: a person looking at pixels and an agent reading the accessibility tree. The mark is a focus ring, the one piece of an interface drawn for readers who do not point.",
+  "personality": [
+    { "trait": "Exact", "means": "Real numbers, named sources, rules tagged by evidence. Nothing promotional." },
+    { "trait": "Humane", "means": "Plain words for people; the tree and the code are shown, not hidden." },
+    { "trait": "Institutional", "means": "Borrowed from guideline manuals: grids, numbered rules, monospace notes." }
+  ],
+  "voice": { "is": ["Plain", "Specific", "Evidence first"], "isnt": ["Hype", "Mystical about AI", "Vague"],
+    "examples": [{ "say": "Passed 26 of 26 audit checks; the no-skill build passed 19.", "not": "Supercharge your agent's design skills!" }] },
+  "colors": { "primary": "#3442d9", "agent": "#e8a33d", "neutral": { "chroma": 0.012 } },
+  "type": {
+    "display": { "family": "Schibsted Grotesk", "weights": [500, 700, 800] },
+    "text": { "family": "Schibsted Grotesk", "weights": [400, 500, 700] },
+    "mono": { "family": "IBM Plex Mono", "weights": [400, 500] },
+    "scale": { "base": 17, "ratio": 1.25 }
+  },
+  "logo": { "primary": "logo/lockup.svg", "mark": "logo/mark.svg", "minSizePx": 16,
+    "story": "A focus ring around a control: drawn for keyboard, switch and screen reader users, and the same element an agent targets. Thick ring, real hole, solid center, so it holds at 16 px and in one color." },
+  "assets": "assets"
+}
