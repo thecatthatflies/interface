@@ -5,3 +5,7 @@ dist/
 # experiment workspace: builds, screenshots and raw scores stay local
 .lab/
 *.tsbuildinfo
+# local working notes: the handoff system and local Claude settings never get published
+handoff/
+CLAUDE.local.md
+.claude/
