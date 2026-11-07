@@ -1,0 +1,10 @@
+| scene | time | on screen | narration | payoff |
+|---|---|---|---|---|
+| 1. Ring | 0:00-0:04 | Dark. The focus-ring mark draws itself, then type: "Every interface has two readers." | none | The hook, in the brand's own mark |
+| 2. Two readers | 0:04-0:11 | Split screen. Left, an incident card with an Acknowledge button, labeled "What a person sees" in indigo. Right, its accessibility tree typing in, labeled "What an agent reads" in amber. A focus ring lands on Acknowledge; the tree line `button "Acknowledge INC-2291"` lights amber. | none | Shows the idea instead of saying it |
+| 3. Same pixels | 0:11-0:16 | The card stays identical; the tree flips to the no-skill build. Lines turn red: `generic "Acknowledge"  <- keyboard cannot reach it`, `combobox ""`. Type: "Same pixels. One reader locked out." | none | The problem, felt |
+| 4. Benchmark | 0:16-0:23 | Three columns count up: No skill 19, interface-guidelines 26, taste-skill 23, each "of 26 checks". Small line: "Same prompt. Same model. One on-call console." | none | Evidence, not adjectives |
+| 5. Honest beat | 0:23-0:27 | Type: "The no-skill build looked better." Pause. "So the skill changed." | none | Trust: the film admits the loss |
+| 6. The set | 0:27-0:33 | Thirteen skill names settle into a grid. The focus ring hops across them like keyboard Tab, foundation first, then brand-identity, then the rest. | none | Breadth, in the motion language |
+| 7. Brand kit | 0:33-0:37 | brand-identity: palette ramps fill in left to right, the mark scales 512 to 16 px and stays sharp. Type: "This brand was made by the skill." | none | Proof the brand skill works |
+| 8. End card | 0:37-0:40 | Lockup, then `/plugin marketplace add thecatthatflies/interface` and github.com/thecatthatflies/interface. | none | The one next step |

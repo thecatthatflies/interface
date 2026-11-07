@@ -1,0 +1,17 @@
+# interface launch film
+
+audience: developers who build with coding agents (Claude Code, Codex) and care how the interfaces they ship turn out
+believe: every interface now has two readers, a person and an agent, and these skills make agents build for both
+mode: pitch
+voice: no narration; plain, exact on-screen type in the brand's voice; a sparse, warm score with soft key clicks on focus moves
+
+deliverables:
+- interface-launch.mp4: 1920x1080, 30 fps, about 40 s, for the landing page and social; storyboard interface-launch.board
+
+## Look
+The brand from ../public/brand: dark ground #0c0d10, indigo #3442d9 (the person's color), amber #e8a33d (the agent's color),
+Schibsted Grotesk for type, IBM Plex Mono for the accessibility tree and commands. The mark is a focus ring; focus moves are the
+film's only motion language. No glow, no particles, no stock footage.
+
+## Tasks
+- [ ] interface-launch storyboard approved #gate
