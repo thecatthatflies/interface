@@ -4,3 +4,4 @@ dist/
 *.log
 # experiment workspace: builds, screenshots and raw scores stay local
 .lab/
+*.tsbuildinfo
